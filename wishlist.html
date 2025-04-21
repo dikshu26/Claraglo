@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .wishlist-container {
+            display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Centers the grid */
+    align-items: center; /* Aligns items properly */
+    margin: 0 auto; /* Centers the entire grid */
+    padding: 20px;
+    margin-top: 20px; /* Space between header and containers */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+
+        .product-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-details {
+            padding: 15px;
+        }
+        .product-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .key-ingredients {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+        .key-ingredients span {
+            background-color: #e3f6e8;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        .price {
+            margin: 15px 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .remove-btn {
+            background-color: #49a059;
+            color: #f2fdf1;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        body {
+    background-color:#f3f2f1; /* Light background for the main content */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+.header-section {
+    background-color: #f4f1de ; /* Softer shade for header */
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 30px; /* Adds space between header and containers */
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the heading */
+    position: relative;
+}
+
+.back-icon {
+    position: absolute;
+    left: 20px;
+    font-size: 44px;
+    color: #0f100f;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.back-icon:hover {
+    color: #073409; /* Darker green on hover */
+}
+
+.wishlist-heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <div class="header-content">
+            <div class="back-icon" onclick="goBack()">&#x2190;</div>
+            <h1 class="wishlist-heading">My Wishlist</h1>
+        </div>
+    </div>    
+    <div class="wishlist-container" id="wishlist-container">
+        <!-- Wishlist items will be added dynamically here -->
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const wishlistContainer = document.getElementById('wishlist-container');
+            let wishlistItems = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+            function displayWishlist() {
+                wishlistContainer.innerHTML = '';
+
+                if (wishlistItems.length === 0) {
+                    wishlistContainer.innerHTML = `<p>Your wishlist is empty.</p>`;
+                    return;
+                }
+
+                wishlistItems.forEach((product, index) => {
+                    const productCard = `
+                        <div class="product-card">
+                            <img src="${product.image}" alt="${product.title}">
+                            <div class="product-details">
+                                <p class="product-title">${product.title}</p>
+                                <p>${product.description}</p>
+                                <div class="key-ingredients">
+                                    ${product.ingredients.map(ingredient => `<span>${ingredient}</span>`).join('')}
+                                </div>
+                                <p class="price">${product.price}</p>
+                                <button class="remove-btn" data-index="${index}">&#128465; Remove</button>
+                            </div>
+                        </div>`;
+                    wishlistContainer.innerHTML += productCard;
+                });
+
+                // Add event listener for Remove buttons
+                document.querySelectorAll('.remove-btn').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const index = this.getAttribute('data-index');
+                        wishlistItems.splice(index, 1);
+                        localStorage.setItem('wishlist', JSON.stringify(wishlistItems));
+                        displayWishlist();  // Refresh wishlist display
+                    });
+                });
+            }
+
+            displayWishlist();
+        });
+
+        function goBack() {
+        window.history.back(); // Navigates to the previous page
+    }
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClaraGlo - Organic Hair Care</title>
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="body.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+           
+            <span>C L A R O G L O</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            
+            <li><a href="face.html">FACE</a></li>
+            <li><a href="body.html">BODY</a></li>
+            <li><a href="hair.html">HAIR</a></li>
+            
+            <li><a href="contact.php">CONTACT</a></li>
+        </ul>
+     
+     
+        <div class="search-container">
+            <form method="GET" action="search.php">
+                <input type="text" name="search" placeholder="search" class="search-bar" required>
+                
+            </form>
+         </div>
+     
+     
+     
+           <div class="nav-right">
+            <a href="#" onclick="openCartSidebar()"><i class="fa-solid fa-cart-plus"></i></a>
+            <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+            <a href="login.php">LOGIN</a>
+            <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+     </nav>
+     
+ <section class="beauty-bundles">
+    <h2>BEAUTY BUNDLES</h2>
+    <div class="products-container">
+        <!-- 1. Hair Oil -->
+        <div class="product-card">
+            <img src="images/pic18.jpg"alt="Organic Hair Oil">
+            <span class="offer-tag">100% Natural & Organic</span>
+            <p class="product-title">ClaraGlo Nourishing Hair Oil - Argan & Jojoba</p>
+            <p class="price">₹599 <span class="old-price">₹799</span> <span class="discount">25% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                  onclick="addToCart('ClaraGlo Nourishing Hair Oil - Argan & Jojoba', 599 , 'images/pic18.jpg')">
+                  Add to Cart
+                </button>
+                <span class="wishlist-heart" 
+                data-product='{
+                  "image": "images/pic18.jpg",
+                  "title": "ClaraGlo Nourishing Hair Oil",
+                  "description": "Revitalizing hair oil enriched with Argan and Jojoba oils for deep nourishment and shine",
+                  "ingredients": ["Argan Oil", "Jojoba Oil", "Vitamin E", "Coconut Oil"],
+                  "price": "₹599"
+                }'>🤍</span>
+            
+            </div>
+        </div>
+    
+        <!-- 2. Shampoo -->
+        <div class="product-card">
+            <img src="images/pic16.jpg" alt="Organic Shampoo">
+            <span class="offer-tag">Sulphate & Paraben Free</span>
+            <p class="product-title">ClaraGlo Strengthening Shampoo - Aloe & Keratin</p>
+            <p class="price">₹499 <span class="old-price">₹699</span> <span class="discount">30% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+            onclick="addToCart('ClaraGlo Strengthening Shampoo - Aloe & Keratin', 499, 'images/pic16.jpg')">
+        Add to Cart
+    </button>
+    <span class="wishlist-heart"  
+    data-product='{
+      "image": "images/pic16.jpg",
+      "title": "ClaraGlo Strengthening Shampoo",
+      "description": "Gentle shampoo infused with Aloe and Keratin to strengthen and nourish your hair.",
+      "ingredients": ["Aloe Vera", "Keratin", "Vitamin B5", "Argan Oil"],
+      "price": "₹499"
+    }'>🤍</span>
+            </div>
+        </div>
+    
+        <!-- 3. Conditioner -->
+        <div class="product-card">
+            <img src="images/pic7.jpg" alt="Organic Conditioner">
+            <span class="offer-tag">Deep Hydration</span>
+            <p class="product-title">ClaraGlo Moisturizing Conditioner - Shea Butter & Coconut</p>
+            <p class="price">₹549 <span class="old-price">₹749</span> <span class="discount">27% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+            onclick="addToCart('ClaraGlo Moisturizing Conditioner - Shea Butter & Coconut', 549, 'images/pic7.jpg')">
+        Add to Cart
+    </button>
+    <span class="wishlist-heart"  
+    data-product='{
+      "image": "images/pic7.jpg",
+      "title": "ClaraGlo Moisturizing Conditioner",
+      "description": "Nourishing conditioner enriched with Shea Butter and Coconut Oil for deep hydration and silky smooth hair.",
+      "ingredients": ["Shea Butter", "Coconut Oil", "Argan Oil", "Vitamin E"],
+      "price": "₹549"
+    }'>🤍</span>
+
+            </div>
+        </div>
+    
+        <!-- 4. Hair Mask -->
+        <div class="product-card">
+            <img src="images/pic4.jpg" alt="Organic Hair Mask">
+            <span class="offer-tag">Intense Repair</span>
+            <p class="product-title">ClaraGlo Repairing Hair Mask - Avocado & Honey</p>
+            <p class="price">₹699 <span class="old-price">₹899</span> <span class="discount">22% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+            onclick="addToCart('ClaraGlo Repairing Hair Mask - Avocado & Honey', 699, 'images/pic4.jpg')">
+        Add to Cart
+    </button>
+    <span class="wishlist-heart"  
+    data-product='{
+      "image": "images/pic4.jpg",
+      "title": "ClaraGlo Repairing Hair Mask",
+      "description": "Intensive hair mask infused with Avocado and Honey to repair and strengthen damaged hair.",
+      "ingredients": ["Avocado Oil", "Honey", "Aloe Vera", "Keratin"],
+      "price": "₹699"
+    }'>🤍</span>
+            </div>
+        </div>
+    
+        <!-- 5. Hair Serum -->
+        <div class="product-card">
+            <img src="images/pic3.jpg" alt="Organic Hair Serum">
+            <span class="offer-tag">Frizz Control</span>
+            <p class="product-title">ClaraGlo Smoothing Hair Serum - Argan & Vitamin E</p>
+            <p class="price">₹499 <span class="old-price">₹699</span> <span class="discount">28% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+            onclick="addToCart('ClaraGlo Smoothing Hair Serum - Argan & Vitamin E', 499, 'images/pic3.jpg')">
+        Add to Cart
+    </button>
+    <span class="wishlist-heart"  
+    data-product='{
+      "image": "images/pic3.jpg",
+      "title": "ClaraGlo Smoothing Hair Serum",
+      "description": "Lightweight serum enriched with Argan Oil and Vitamin E to control frizz and add shine.",
+      "ingredients": ["Argan Oil", "Vitamin E", "Jojoba Oil", "Aloe Vera"],
+      "price": "₹499"
+    }'>🤍</span>
+            </div>
+        </div>
+    
+        <!-- 6. Dry Shampoo -->
+        <div class="product-card">
+            <img src="images/pic9.jpg" alt="Organic Dry Shampoo">
+            <span class="offer-tag">No Water Needed</span>
+            <p class="product-title">ClaraGlo Volumizing Dry Shampoo - Rice & Oat Starch</p>
+            <p class="price">₹399 <span class="old-price">₹599</span> <span class="discount">33% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+            onclick="addToCart('ClaraGlo Volumizing Dry Shampoo - Rice & Oat Starch',399, 'images/pic9.jpg')">
+        Add to Cart
+    </button>
+    <span class="wishlist-heart"  
+    data-product='{
+      "image": "images/pic9.jpg",
+      "title": "ClaraGlo Volumizing Dry Shampoo",
+      "description": "Refresh your hair instantly with Rice and Oat Starch for added volume and oil control.",
+      "ingredients": ["Rice Starch", "Oat Starch", "Aloe Vera", "Vitamin B5"],
+      "price": "₹399"
+    }'>🤍</span>
+            </div>
+        </div>
+    
+        <!-- 7. Hair Mousse -->
+        <div class="product-card">
+            <img src="images/pic7.jpg" alt="Organic Hair Mousse">
+            <span class="offer-tag">Weightless Hold</span>
+            <p class="product-title">ClaraGlo Styling Hair Mousse - Aloe & Green Tea</p>
+            <p class="price">₹549 <span class="old-price">₹749</span> <span class="discount">27% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+            onclick="addToCart('ClaraGlo Styling Hair Mousse - Aloe & Green Tea', 549, 'images/pic7.jpg')">
+        Add to Cart
+    </button>
+    <span class="wishlist-heart"  
+    data-product='{
+      "image": "images/pic7.jpg",
+      "title": "ClaraGlo Styling Hair Mousse",
+      "description": "Lightweight mousse enriched with Aloe and Green Tea for a soft, flexible hold with added shine.",
+      "ingredients": ["Aloe Vera", "Green Tea Extract", "Vitamin B5", "Argan Oil"],
+      "price": "₹549"
+    }'>🤍</span>
+            </div>
+        </div>
+    
+        <!-- 8. Scalp Scrub -->
+        <div class="product-card">
+            <img src="images/pic14.jpg"alt="Organic Scalp Scrub">
+            <span class="offer-tag">Detox & Refresh</span>
+            <p class="product-title">ClaraGlo Scalp Scrub - Sea Salt & Charcoal</p>
+            <p class="price">₹599 <span class="old-price">₹799</span> <span class="discount">25% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+            onclick="addToCart('ClaraGlo Scalp Scrub - Sea Salt & Charcoa', 599, 'images/pic14.jpg')">
+        Add to Cart
+    </button>
+    <span class="wishlist-heart"  
+    data-product='{
+      "image": "images/pic14.jpg",
+      "title": "ClaraGlo Scalp Scrub",
+      "description": "Detoxifying scrub infused with Sea Salt and Charcoal to cleanse and refresh the scalp.",
+      "ingredients": ["Sea Salt", "Charcoal", "Tea Tree Oil", "Peppermint Oil"],
+      "price": "₹599"
+    }'>🤍</span>
+            </div>
+        </div>
+    
+        <!-- 9. Heat Protectant Spray -->
+        <div class="product-card">
+            <img src="images/pic10.jpg" alt="Organic Heat Protectant Spray">
+            <span class="offer-tag">Protects from Heat Damage</span>
+            <p class="product-title">ClaraGlo Heat Protectant Spray - Keratin & Coconut</p>
+            <p class="price">₹649 <span class="old-price">₹899</span> <span class="discount">28% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                onclick="addToCart('ClaraGlo Heat Protectant Spray - Keratin & Coconut', 649, 'images/pic10.jpg')">
+            Add to Cart
+        </button>
+        <span class="wishlist-heart"  
+        data-product='{
+          "image": "images/pic10.jpg",
+          "title": "ClaraGlo Heat Protectant Spray",
+          "description": "Shield your hair from heat damage with Keratin and Coconut for enhanced protection and shine.",
+          "ingredients": ["Keratin", "Coconut Oil", "Vitamin E", "Aloe Vera"],
+          "price": "₹649"
+        }'>🤍</span>
+    
+            </div>
+        </div>
+    
+        <!-- 10. Anti-Hair Fall Shampoo -->
+        <div class="product-card">
+            <img src="images/pic11.jpg" alt="Anti-Hair Fall Shampoo">
+            <span class="offer-tag">Strengthens Hair</span>
+            <p class="product-title">ClaraGlo Anti-Hair Fall Shampoo - Biotin & Ginger</p>
+            <p class="price">₹599 <span class="old-price">₹799</span> <span class="discount">25% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+            onclick="addToCart('ClaraGlo Anti-Hair Fall Shampoo - Biotin & Ginger', 549, 'images/pic11.jpg')">
+        Add to Cart
+    </button>
+    <span class="wishlist-heart"  
+    data-product='{
+      "image": "images/pic11.jpg",
+      "title": "ClaraGlo Anti-Hair Fall Shampoo",
+      "description": "Fortified with Biotin and Ginger to strengthen hair and reduce hair fall.",
+      "ingredients": ["Biotin", "Ginger Extract", "Aloe Vera", "Vitamin B5"],
+      "price": "₹599"
+    }'>🤍</span>
+
+            </div>
+        </div>
+    
+        <!-- 11. Anti-Dandruff Shampoo -->
+        <div class="product-card">
+            <img src="images/pic12.jpg" alt="Anti-Dandruff Shampoo">
+            <span class="offer-tag">Soothes Scalp</span>
+            <p class="product-title">ClaraGlo Anti-Dandruff Shampoo - Tea Tree & Neem</p>
+            <p class="price">₹549 <span class="old-price">₹749</span> <span class="discount">27% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                onclick="addToCart('ClaraGlo Anti-Dandruff Shampoo - Tea Tree & Neem', 549, 'images/pic12.jpg')">
+            Add to Cart
+        </button>
+        <span class="wishlist-heart"  
+        data-product='{
+          "image": "images/pic12.jpg",
+          "title": "ClaraGlo Anti-Dandruff Shampoo",
+          "description": "Infused with Tea Tree and Neem to soothe the scalp and combat dandruff.",
+          "ingredients": ["Tea Tree Oil", "Neem Extract", "Aloe Vera", "Vitamin E"],
+          "price": "₹549"
+        }'>🤍</span>
+                </div>
+        </div>
+    </div>    
+</section>
+
+
+
+  
+
+<!-- Overlay for Background Blur -->
+<div class="overlay" onclick="closeCartSidebar()"></div>
+
+<!-- Cart Sidebar -->
+<div class="cart-sidebar">
+    <span class="close-icon" onclick="closeCartSidebar()">❌</span>
+    <h2>Your Cart</h2>
+    
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+        <p id="total-price">Total: ₹0</p>
+        <button class="checkout-btn" onclick="window.location.href='payment.html';">
+            Proceed to Checkout
+        </button>
+
+    </div>
+</div>
+<div id="cart-message">Added to Cart</div>
+
+
+<script src="body.js"></script>
+<script src="wishlist.js"></script>
+
+  
+<footer class="footer">
+    <div class="container">
+       <div class="footer-grid">
+       <div class="footer-section">
+       <h3>Clara glo</h3>
+       <p>Skin care rooted in nature.</p>
+     </div>
+     <div class="footer-section">
+       <h4>Quick Links</h4>
+       <ul>
+         <li><a href="home.html">Home</a></li>
+         <li><a href="home.html#blog">Blogs</a></li>
+         <li><a href="about1.html">About</a></li>
+         <li><a href="contact.php">Contact</a></li>
+       </ul>
+     </div>
+       <div class="footer-section">
+       <h4>Resources</h4>
+       <ul>
+         <li><a href="privacy.html">Privacy policy</a></li>
+         <li><a href="terms.html">Terms & Conditions</a></li>
+         <li><a href="returns.html">Delivery and canclation</a></li>
+       </ul>
+     </div>
+       <div class="footer-section">
+       <h4>Connect With Us</h4>
+       <div class="social-links">
+         <ul>
+             <li>
+                <a href="https://www.linkedin.com/in/clara-glo-b0318135b/" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <!-- LinkedIn SVG Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 
+                               5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.269c-.966 
+                               0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 
+                               1.75.784 1.75 1.75-.784 1.75-1.75 
+                               1.75zm13.5 11.269h-3v-5.604c0-1.337-.026-3.063-1.867-3.063-1.868 
+                               0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.762 
+                               1.379-1.566 2.838-1.566 3.033 0 3.592 1.995 
+                               3.592 4.59v5.609z"/>
+                    </svg>
+                  </a>
+             </li>
+             
+             <li>
+                <a href="https://www.instagram.com/claraglo_skincare/" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <!-- Clean Outline Instagram SVG Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.8-2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                  </a>
+                  
+             </li>
+         </ul>
+     </div>
+</div>        
+   </div>
+
+   <div class="footer-bottom">
+     <p>2025&copy;  Clara glo powered by natural beauty</p>
+   </div>
+ </div>
+</footer> 
+
+</body>
+</html>

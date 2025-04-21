@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClaraGlo - Organic Hair Care</title>
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="body.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">
+       
+        <span>C L A R O G L O</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="face.html">FACE</a></li>
+        <li><a href="body.html">BODY</a></li>
+        <li><a href="hair.html">HAIR</a></li>
+        <li><a href="contact.php">CONTACT</a></li>
+    </ul>
+
+    <div class="search-container">
+        <form method="GET" action="search.php">
+            <input type="text" name="search" placeholder="search" class="search-bar" required>
+            
+        </form>
+     </div>
+ 
+
+    <div class="nav-right">
+        <a href="#" onclick="openCartSidebar()"><i class="fa-solid fa-cart-plus"></i></a>
+        <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+       <a href="login.php">LOGIN</a>
+       <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i></a>
+   </div>
+ </nav>
+ <section class="beauty-bundles">
+    <h2>BEAUTY BUNDLES</h2>
+    <div class="products-container">
+        <!-- 1. Body Lotion -->
+        <div class="product-card">
+            <img src="images/pic13.jpg" alt="Organic Body Lotion">
+            <span class="offer-tag">100% Natural & Organic</span>
+            <p class="product-title">ClaraGlo Hydrating Body Lotion - Aloe & Shea Butter</p>
+            <p class="price">₹549 <span class="old-price">₹699</span> <span class="discount">20% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                            onclick="addToCart('ClaraGlo Hydrating Body Lotion', 549, 'images/pic13.jpg')">
+                        Add to Cart
+                    </button>
+                    <span class="wishlist-heart"  
+                    data-product='{
+                      "image": "images/pic13.jpg",
+                      "title": "ClaraGlo Hydrating Body Lotion",
+                      "description": "Nourishing body lotion enriched with Aloe and Shea Butter for deep hydration and smooth skin.",
+                      "ingredients": ["Aloe Vera", "Shea Butter", "Vitamin E", "Coconut Oil"],
+                      "price": "₹549"
+                    }'>🤍</span>
+                 </div>
+        </div>
+    
+        <!-- 2. Shower Gel -->
+        <div class="product-card">
+            <img src="images/pic19.jpg" alt="Organic Shower Gel">
+            <span class="offer-tag">Sulphate & Paraben Free</span>
+            <p class="product-title">ClaraGlo Refreshing Shower Gel - Citrus & Green Tea</p>
+            <p class="price">₹599 <span class="old-price">₹799</span> <span class="discount">25% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                            onclick="addToCart('ClaraGlo Refreshing Shower Gel - Citrus & Green Tea', 799, 'images/pic19.jpg')">
+                        Add to Cart
+                    </button>
+                    <span class="wishlist-heart"  
+                    data-product='{
+                      "image": "images/pic19.jpg",
+                      "title": "ClaraGlo Refreshing Shower Gel",
+                      "description": "Invigorating shower gel infused with Citrus and Green Tea for a fresh, energizing cleanse.",
+                      "ingredients": ["Citrus Extract", "Green Tea", "Aloe Vera", "Vitamin E"],
+                      "price": "₹599"
+                    }'>🤍</span>
+                 </div>
+        </div>
+    
+        <!-- 3. Body Scrub -->
+        <div class="product-card">
+            <img src="images/pic23.jpg" alt="Organic Body Scrub">
+            <span class="offer-tag">100% Vegan & Cruelty-Free</span>
+            <p class="product-title">ClaraGlo Exfoliating Body Scrub - Coffee & Walnut</p>
+            <p class="price">₹499 <span class="old-price">₹699</span> <span class="discount">30% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                onclick="addToCart('ClaraGlo Exfoliating Body Scrub - Coffee & Walnut', 499, 'images/pic23.jpg')">
+            Add to Cart
+        </button>
+        <span class="wishlist-heart"  
+        data-product='{
+          "image": "images/pic23.jpg",
+          "title": "ClaraGlo Exfoliating Body Scrub",
+          "description": "Invigorating body scrub enriched with Coffee and Walnut for deep exfoliation and smooth skin.",
+          "ingredients": ["Coffee", "Walnut", "Shea Butter", "Vitamin E"],
+          "price": "₹499"
+        }'>🤍</span>
+           </div>
+        </div>
+    
+        <!-- 4. Body Wash -->
+        <div class="product-card">
+            <img src="images/pic25.jpg"  alt="Organic Body Wash">
+            <span class="offer-tag">Infused with Essential Oils</span>
+            <p class="product-title">ClaraGlo Nourishing Body Wash - Lavender & Coconut</p>
+            <p class="price">₹649 <span class="old-price">₹899</span> <span class="discount">28% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                            onclick="addToCart('ClaraGlo Nourishing Body Wash - Lavender & Coconut', 649, 'images/pic25.jpg')">
+                        Add to Cart
+                    </button>
+                    <span class="wishlist-heart"  
+                    data-product='{
+                      "image": "images/pic25.jpg",
+                      "title": "ClaraGlo Nourishing Body Wash",
+                      "description": "Gentle body wash infused with Lavender and Coconut for a calming and hydrating shower experience.",
+                      "ingredients": ["Lavender", "Coconut", "Aloe Vera", "Vitamin E"],
+                      "price": "₹649"
+                    }'>🤍</span>
+                            </div>
+        </div>
+    
+        <!-- 5. Body Butter -->
+        <div class="product-card">
+            <img src="images/pic24.jpg" alt="Organic Body Butter">
+            <span class="offer-tag">Ultra Moisturizing</span>
+            <p class="product-title">ClaraGlo Shea Butter Body Cream - Cocoa & Almond</p>
+            <p class="price">₹799 <span class="old-price">₹999</span> <span class="discount">20% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                            onclick="addToCart('ClaraGlo Shea Butter Body Cream - Cocoa & Almond', 799, 'images/pic24.jpg')">
+                        Add to Cart
+                    </button>
+                    <span class="wishlist-heart"  
+                    data-product='{
+                      "image": "images/pic24.jpg",
+                      "title": "ClaraGlo Shea Butter Body Cream",
+                      "description": "Ultra-moisturizing body cream enriched with Cocoa and Almond for deep hydration and silky smooth skin.",
+                      "ingredients": ["Shea Butter", "Cocoa", "Almond Oil", "Vitamin E"],
+                      "price": "₹799"
+                    }'>🤍</span>
+                            </div>
+        </div>
+    
+        <!-- 6. Bath Salts -->
+        <div class="product-card">
+            <img src="images/pic20.jpg" alt="Organic Bath Salt">
+            <span class="offer-tag">Relax & Detox</span>
+            <p class="product-title">ClaraGlo Himalayan Pink Bath Salt - Lavender & Eucalyptus</p>
+            <p class="price">₹699 <span class="old-price">₹899</span> <span class="discount">22% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                onclick="addToCart('ClaraGlo Himalayan Pink Bath Salt - Lavender & Eucalyptus', 699, 'images/pic20.jpg')">
+            Add to Cart
+        </button>
+        <span class="wishlist-heart"  
+        data-product='{
+          "image": "images/pic20.jpg",
+          "title": "ClaraGlo Himalayan Pink Bath Salt",
+          "description": "Relaxing and detoxifying bath salt infused with Lavender and Eucalyptus for soothing your body and mind.",
+          "ingredients": ["Himalayan Pink Salt", "Lavender", "Eucalyptus", "Essential Oils"],
+          "price": "₹699"
+        }'>🤍</span>
+                </div>
+        </div>
+    
+        <!-- 7. Body Oil -->
+        <div class="product-card">
+            <img src="images/pic22.jpg" alt="Organic Body Oil">
+            <span class="offer-tag">Cold-Pressed Oils</span>
+            <p class="product-title">ClaraGlo Soothing Body Oil - Jojoba & Argan</p>
+            <p class="price">₹899 <span class="old-price">₹1199</span> <span class="discount">25% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                            onclick="addToCart('ClaraGlo Soothing Body Oil - Jojoba & Argan', 899, 'images/pic22.jpg')">
+                        Add to Cart
+                    </button>
+                    <span class="wishlist-heart"  
+                    data-product='{
+                      "image": "images/pic22.jpg",
+                      "title": "ClaraGlo Soothing Body Oil",
+                      "description": "Cold-pressed oil blend with Jojoba and Argan oils for deep hydration and skin nourishment.",
+                      "ingredients": ["Jojoba Oil", "Argan Oil", "Vitamin E", "Essential Oils"],
+                      "price": "₹899"
+                    }'>🤍</span>
+                            </div>
+        </div>
+    
+        <!-- 8. Foot Scrub -->
+        <div class="product-card">
+            <img src="images/pic21.jpg"alt="Organic Foot Scrub">
+            <span class="offer-tag">For Soft & Smooth Feet</span>
+            <p class="product-title">ClaraGlo Exfoliating Foot Scrub - Peppermint & Tea Tree</p>
+            <p class="price">₹499 <span class="old-price">₹699</span> <span class="discount">28% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                            onclick="addToCart('ClaraGlo Exfoliating Foot Scrub - Peppermint & Tea Tree', 499 , 'images/pic21.jpg')">
+                        Add to Cart
+                    </button>
+                    <span class="wishlist-heart"  
+                    data-product='{
+                      "image": "images/pic21.jpg",
+                      "title": "ClaraGlo Exfoliating Foot Scrub",
+                      "description": "Gentle exfoliating scrub with Peppermint and Tea Tree for soft and smooth feet.",
+                      "ingredients": ["Peppermint Oil", "Tea Tree Oil", "Epsom Salt", "Aloe Vera"],
+                      "price": "₹499"
+                    }'>🤍</span>
+                            </div>
+        </div>
+    
+        <!-- 9. Hand Cream -->
+        <div class="product-card">
+            <img src="images/pic27.jpg" alt="Organic Hand Cream">
+            <span class="offer-tag">Deep Hydration</span>
+            <p class="product-title">ClaraGlo Hand Cream - Avocado & Shea Butter</p>
+            <p class="price">₹349 <span class="old-price">₹499</span> <span class="discount">30% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                            onclick="addToCart('ClaraGlo Hand Cream - Avocado & Shea Butter', 349, 'images/pic27.jpg')">
+                        Add to Cart
+                    </button>
+                    <span class="wishlist-heart"  
+                    data-product='{
+                      "image": "images/pic27.jpg",
+                      "title": "ClaraGlo Hand Cream",
+                      "description": "Deeply hydrating hand cream enriched with Avocado and Shea Butter for soft and nourished hands.",
+                      "ingredients": ["Avocado Oil", "Shea Butter", "Vitamin E", "Cocoa Butter"],
+                      "price": "₹349"
+                    }'>🤍</span>
+                            </div>
+        </div>
+    
+        <!-- 10. body moisturizer -->
+        <div class="product-card">
+            <img src="images/pic33.jpg" alt="Organic Lip Balm">
+            <span class="offer-tag">Chemical-Free</span>
+            <p class="product-title">ClaraGlo Beeswax body moisturizer - Coconut & Vanilla</p>
+            <p class="price">₹199 <span class="old-price">₹299</span> <span class="discount">33% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                            onclick="addToCart('ClaraGlo Beeswax body moisturizer - Coconut & Vanilla',199, 'images/pic33.jpg')">
+                        Add to Cart
+                    </button>
+                    <span class="wishlist-heart"  
+                    data-product='{
+                      "image": "images/pic33.jpg",
+                      "title": "ClaraGlo Beeswax Body Moisturizer",
+                      "description": "Nourishing body moisturizer enriched with Coconut and Vanilla for soft, smooth skin.",
+                      "ingredients": ["Beeswax", "Coconut Oil", "Vanilla Extract", "Vitamin E"],
+                      "price": "₹199"
+                    }'>🤍</span>
+                            </div>
+        </div>
+    
+        <!-- 11. Face & Body Mist -->
+        <div class="product-card">
+            <img src="images/pic32.jpg"  alt="Organic Face & Body Mist">
+            <span class="offer-tag">Refreshing & Toning</span>
+            <p class="product-title">ClaraGlo Aloe & Rose Water Face & Body Mist</p>
+            <p class="price">₹399 <span class="old-price">₹599</span> <span class="discount">33% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                            onclick="addToCart('ClaraGlo Aloe & Rose Water Face & Body Mist', 399, 'images/pic32.jpg')">
+                        Add to Cart
+                    </button>
+                    <span class="wishlist-heart"  
+                    data-product='{
+                      "image": "images/pic32.jpg",
+                      "title": "ClaraGlo Aloe & Rose Water Face & Body Mist",
+                      "description": "A refreshing and toning mist infused with Aloe and Rose Water for instant hydration and glow.",
+                      "ingredients": ["Aloe Vera", "Rose Water", "Vitamin C", "Witch Hazel"],
+                      "price": "₹399"
+                    }'>🤍</span>
+                            </div>
+        </div>
+    
+        <!-- 12. Natural Deodorant -->
+        <div class="product-card">
+            <img src="images/pic26.jpg" alt="Organic Deodorant">
+            <span class="offer-tag">Aluminum-Free</span>
+            <p class="product-title">ClaraGlo Organic Deodorant Stick - Lemon & Sage</p>
+            <p class="price">₹499 <span class="old-price">₹699</span> <span class="discount">28% off</span></p>
+            <div class="cart-wishlist">
+                <button class="add-to-cart" 
+                onclick="addToCart('ClaraGlo Organic Deodorant Stick - Lemon & Sage', 499, 'images/pic26.jpg')">
+            Add to Cart
+        </button>
+        <span class="wishlist-heart"  
+        data-product='{
+          "image": "images/pic26.jpg",
+          "title": "ClaraGlo Organic Deodorant Stick",
+          "description": "A refreshing deodorant stick infused with Lemon and Sage for all-day freshness and odor protection.",
+          "ingredients": ["Lemon Extract", "Sage Oil", "Coconut Oil", "Shea Butter"],
+          "price": "₹499"
+        }'>🤍</span>
+                </div>
+        </div>
+    </div>    
+</section>
+
+<!-- Overlay for Background Blur -->
+<div class="overlay" onclick="closeCartSidebar()"></div>
+
+<!-- Cart Sidebar -->
+<div class="cart-sidebar">
+    <span class="close-icon" onclick="closeCartSidebar()">❌</span>
+    <h2>Your Cart</h2>
+    
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+        <p id="total-price">Total: ₹0</p>
+        <button class="checkout-btn" onclick="window.location.href='payment.html';">
+            Proceed to Checkout
+        </button>
+
+    </div>
+</div>
+<div id="cart-message">Added to Cart</div>
+
+
+<script src="body.js"></script>
+<script src="wishlist.js"></script>
+
+
+
+
+<footer class="footer">
+    <div class="container">
+       <div class="footer-grid">
+       <div class="footer-section">
+       <h3>Clara glo</h3>
+       <p>Skin care rooted in nature.</p>
+     </div>
+     <div class="footer-section">
+       <h4>Quick Links</h4>
+       <ul>
+         <li><a href="home.html">Home</a></li>
+         <li><a href="home.html#blog">Blogs</a></li>
+         <li><a href="about1.html">About</a></li>
+         <li><a href="contact.php">Contact</a></li>
+       </ul>
+     </div>
+       <div class="footer-section">
+       <h4>Resources</h4>
+       <ul>
+         <li><a href="privacy.html">Privacy policy</a></li>
+         <li><a href="terms.html">Terms & Conditions</a></li>
+         <li><a href="returns.html">Delivery and canclation</a></li>
+       </ul>
+     </div>
+       <div class="footer-section">
+       <h4>Connect With Us</h4>
+       <div class="social-links">
+         <ul>
+             <li>
+                <a href="https://www.linkedin.com/in/clara-glo-b0318135b/" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <!-- LinkedIn SVG Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 
+                               5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.269c-.966 
+                               0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 
+                               1.75.784 1.75 1.75-.784 1.75-1.75 
+                               1.75zm13.5 11.269h-3v-5.604c0-1.337-.026-3.063-1.867-3.063-1.868 
+                               0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.762 
+                               1.379-1.566 2.838-1.566 3.033 0 3.592 1.995 
+                               3.592 4.59v5.609z"/>
+                    </svg>
+                  </a>
+             </li>
+             <li>
+                <a href="https://www.instagram.com/claraglo_skincare/" class="social-link" target="_blank" rel="noopener noreferrer">
+                    <!-- Clean Outline Instagram SVG Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.8-2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                    </svg>
+                  </a>
+             </li>
+         </ul>
+     </div>
+</div>        
+   </div>
+
+   <div class="footer-bottom">
+     <p>2025&copy;  Clara glo powered by natural beauty</p>
+   </div>
+ </div>
+</footer> 
+
+</body>
+</html>

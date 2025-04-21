@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClaraGlo - Organic Hair Care</title>
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="body.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+           
+            <span>C L A R O G L O</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">HOME</a></li>
+            
+            <li><a href="face.html">FACE</a></li>
+            <li><a href="body.html">BODY</a></li>
+            <li><a href="hair.html">HAIR</a></li>
+            
+            <li><a href="contact.php">CONTACT</a></li>
+        </ul>
+     
+     
+        <div class="search-container">
+            <form method="GET" action="search.php">
+                <input type="text" name="search" placeholder="search" class="search-bar" required>
+                
+            </form>
+         </div>
+     
+     
+     
+           <div class="nav-right">
+            <a href="#" onclick="openCartSidebar()"><i class="fa-solid fa-cart-plus"></i></a>
+            <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+            <a href="login.php">LOGIN</a>
+            <a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+     </nav>
+     
+
+ <section class="beauty-bundles">
+    <h2>BEAUTY BUNDLES</h2>
+    
+    <div class="products-container">
+    <!-- 1. Hair Oil -->
+    <div class="product-card">
+        <img src="images/pic18.jpg"alt="Organic Hair Oil">
+        <span class="offer-tag">100% Natural & Organic</span>
+        <p class="product-title">ClaraGlo Nourishing Hair Oil - Argan & Jojoba</p>
+        <p class="price">₹599 <span class="old-price">₹799</span> <span class="discount">25% off</span></p>
+        <div class="cart-wishlist">
+            <button class="add-to-cart" 
+              onclick="addToCart('ClaraGlo Nourishing Hair Oil - Argan & Jojoba', 599 , 'images/pic18.jpg')">
+              Add to Cart
+            </button>
+            <span class="wishlist-heart" 
+            data-product='{
+              "image": "images/pic18.jpg",
+              "title": "ClaraGlo Nourishing Hair Oil",
+              "description": "Revitalizing hair oil enriched with Argan and Jojoba oils for deep nourishment and shine",
+              "ingredients": ["Argan Oil", "Jojoba Oil", "Vitamin E", "Coconut Oil"],
+              "price": "₹599"
+            }'>🤍</span>
+        
+        </div>
+    </div>
+
+    <!-- 2. Shampoo -->
+    <div class="product-card">
+        <img src="images/pic16.jpg" alt="Organic Shampoo">
+        <span class="offer-tag">Sulphate & Paraben Free</span>
+        <p class="product-title">ClaraGlo Strengthening Shampoo - Aloe & Keratin</p>
+        <p class="price">₹499 <span class="old-price">₹699</span> <span class="discount">30% off</span></p>
+        <div class="cart-wishlist">
+            <button class="add-to-cart" onclick="addToCart('ClaraGlo Strengthening Shampoo - Aloe & Keratin', 499,'images/pic30.jpg')">Add to Cart</button>
+            <span class="wishlist-heart" onclick="toggleWishlist(this)">🤍</span>
+        </div>
+    </div>
+    <!-- 3. Body Scrub -->
+    <div class="product-card">
+        <img src="images/pic23.jpg" alt="Organic Body Scrub">
+        <span class="offer-tag">100% Vegan & Cruelty-Free</span>
+        <p class="product-title">ClaraGlo Exfoliating Body Scrub - Coffee & Walnut</p>
+        <p class="price">₹499 <span class="old-price">₹699</span> <span class="discount">30% off</span></p>
+        <div class="cart-wishlist">
+            <button class="add-to-cart">Add to Cart</button<button class="add-to-cart" onclick="addToCart('ClaraGlo Hydrating Face Cleanser - Aloe & Vitamin C', 549,'images/pic30.jpg')">Add to Cart</button>>
+            <span class="wishlist-heart" onclick="toggleWishlist(this)">🤍</span>
+        </div>
+    </div>
+
+    <!-- 4. Body Wash -->
+    <div class="product-card">
+        <img src="images/pic25.jpg"  alt="Organic Body Wash">
+        <span class="offer-tag">Infused with Essential Oils</span>
+        <p class="product-title">ClaraGlo Nourishing Body Wash - Lavender & Coconut</p>
+        <p class="price">₹649 <span class="old-price">₹899</span> <span class="discount">28% off</span></p>
+        <div class="cart-wishlist">
+            <button class="add-to-cart" onclick="addToCart('ClaraGlo Hydrating Face Cleanser - Aloe & Vitamin C', 549,'images/pic30.jpg')">Add to Cart</button>
+            <span class="wishlist-heart" onclick="toggleWishlist(this)">🤍</span>
+        </div>
+    </div>
+
+    <!-- 11. Face Oil -->
+    <div class="product-card">
+        <img src="images/pic5.jpg" alt="Organic Face Oil">
+        <span class="offer-tag">Glowing Skin</span>
+        <p class="product-title">ClaraGlo Radiance Face Oil - Argan & Rosehip</p>
+        <p class="price">₹799 <span class="old-price">₹999</span> <span class="discount">20% off</span></p>
+        <div class="cart-wishlist">
+            <button class="add-to-cart" onclick="addToCart('ClaraGlo Radiance Face Oil - Argan & Rosehip', 799)">Add to Cart</button>
+            <span class="wishlist-heart" onclick="toggleWishlist(this)">🤍</span>
+        </div>
+    </div>
+
+    <!-- 12. Acne Spot Treatment -->
+    <div class="product-card">
+        <img src="images/pic8.jpg" alt="Acne Spot Treatment">
+        <span class="offer-tag">Blemish Control</span>
+        <p class="product-title">ClaraGlo Acne Spot Treatment - Tea Tree & Salicylic Acid</p>
+        <p class="price">₹499 <span class="old-price">₹699</span> <span class="discount">30% off</span></p>
+        <div class="cart-wishlist">
+            <button class="add-to-cart" onclick="addToCart('ClaraGlo Acne Spot Treatment - Tea Tree & Salicylic Acid', 499)">Add to Cart</button>
+            <span class="wishlist-heart" onclick="toggleWishlist(this)">🤍</span>
+        </div>
+    </div>
+    </div>
+</div>   
+</section>
+
+
+
+
+<footer class="footer">
+    <div class="container">
+       <div class="footer-grid">
+       <div class="footer-section">
+       <h3>Clara glo</h3>
+       <p>Skin care rooted in nature.</p>
+     </div>
+     <div class="footer-section">
+       <h4>Quick Links</h4>
+       <ul>
+         <li><a href="home.html">Home</a></li>
+         <li><a href="home.html#blog">Blogs</a></li>
+         <li><a href="About.html">About</a></li>
+         <li><a href="contact.php">Contact</a></li>
+       </ul>
+     </div>
+       <div class="footer-section">
+       <h4>Resources</h4>
+       <ul>
+         <li><a href="privacy.html">Privacy policy</a></li>
+         <li><a href="terms.html">Terms & Conditions</a></li>
+         <li><a href="returns.html">Delivery and canclation</a></li>
+       </ul>
+     </div>
+       <div class="footer-section">
+       <h4>Connect With Us</h4>
+       <div class="social-links">
+         <ul>
+             <li>
+                 <a href="#" class="social-link">
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 
+                         A5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 
+                         0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                     </svg>
+                 </a>
+             </li>
+             <li>
+                 <a href="#" class="social-link">
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                         <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 
+                         7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                     </svg>
+                 </a>
+             </li>
+             <li>
+                 <a href="#" class="social-link">
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                         <rect x="2" y="9" width="4" height="12"></rect>
+                         <circle cx="4" cy="4" r="2"></circle>
+                     </svg>
+                 </a>
+             </li>
+         </ul>
+     </div>
+</div>        
+   </div>
+
+   <div class="footer-bottom">
+     <p>2025&copy;  Clara glo powered by natural beauty</p>
+   </div>
+ </div>
+</footer> 
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Elegant Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="payment.css">
+  <script src="pay.js"></script>
+  
+</head>
+<body>
+
+<div class="container">
+  <h2>Complete Your Order</h2>
+
+  <form id="paymentForm">
+
+    <!-- Contact Information -->
+    <div class="section">
+      <h3>Contact Information</h3>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+    </div>
+
+    <div class="section">
+      <h3>Shipping Address</h3>
+    
+      <div class="row">
+        <input type="text" name="name" placeholder="Full Name" required />
+      </div>
+    
+      <div class="row">
+        <input type="text" name="street" placeholder="Street Address" required />
+        <input type="text" name="city" placeholder="City" required />
+      </div>
+    
+      <div class="row">
+        <input type="text" name="state" placeholder="State" required />
+        <input type="text" name="pincode" placeholder="Pincode" required />
+      </div>
+    </div>
+    
+
+    <!-- Payment Method -->
+    <div class="section">
+      <h3>Payment Method</h3>
+      <select name="method" id="paymentMethod" required>
+        <option value="card">Credit/Debit Card</option>
+        <option value="upi">UPI</option>
+        <option value="cod">Cash on Delivery</option>
+      </select>
+      <div id="paymentDetails" style="margin-top: 15px;"></div>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="section order-summary">
+      <h3>Order Summary</h3>
+      <ul id="summaryList"></ul>
+      <p id="totalPrice"><strong>Total: ₹0</strong></p>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit">Pay Now</button>
+  </form>
+
+  <div class="message" id="message"></div>
+</div>
+
+<script src="pay.js"></script>
+</body>
+</html>
